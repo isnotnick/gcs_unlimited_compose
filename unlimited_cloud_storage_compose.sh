@@ -51,9 +51,9 @@ do
     st=$((0+(${i}-1)*30))
     ed=$((${st}+30))
     echo "Compose files:"
-    echo "${gsarray[@]:${st}:${ed}}"
+    echo "${gsarray[@]:${st}:30}"
     echo
-    gsutil compose ${gsarray[@]:$st:$ed} ${gsinput}/${FILENAME}-${iter}-${i}.csv
+    gsutil compose ${gsarray[@]:$st:30} ${gsinput}/${FILENAME}-${iter}-${i}.csv
     COMPOSEFILE="${gsinput}/${FILENAME}-${iter}-${i}.csv"
 done
 
